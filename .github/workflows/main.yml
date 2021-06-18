@@ -9,6 +9,8 @@ on:
 
 jobs:
   build:
+    outputs:
+      releaseId: ${{ steps.releaseDrafter.outputs.id }}
 
     runs-on: ubuntu-latest
 
@@ -26,7 +28,8 @@ jobs:
 
     - run: yarn
 
-    - uses: release-drafter/release-drafter@v5
+    - id: releaseDrafter
+      uses: release-drafter/release-drafter@v5
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
