@@ -9,6 +9,7 @@ categories:
     label: 'docs'
   - title: '🔧 Testing'
     label: 'test'
+
 autolabeler:
   - label: 'feat'
     title: 
@@ -25,7 +26,11 @@ autolabeler:
   - label: 'test'
     title: 
     - 'test:'
+
+name-template: "v$NEXT_PATCH_VERSION"
+
 template: |
   ## v$RESOLVED_VERSION
+  v$RESOLVED_VERSION
 
   $CHANGES
