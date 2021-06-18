@@ -30,25 +30,6 @@ jobs:
 
     - run: yarn
 
-    - id: releaseDrafter
-      uses: release-drafter/release-drafter@v5
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - run: gh -h
 
-  release:
-    needs: build
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
-    steps:
-    - name: Publish a Release
-      uses: StuYarrow/publish-release@v1
-      with:
-        id: ${{ needs.build.releaseDrafter.outputs.id }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
