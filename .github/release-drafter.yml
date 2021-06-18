@@ -13,19 +13,19 @@ categories:
 autolabeler:
   - label: 'feat'
     title: 
-    - 'feat(.*):'
+    - '/feat(.*):/'
   - label: 'fix'
     title: 
-    - 'fix(.*):'
+    - '/fix(.*):/'
   - label: 'chore'
     title: 
-    - 'chore(.*):'
+    - '/chore(.*):/'
   - label: 'docs'
     title: 
-    - 'docs(.*):'
+    - '/docs(.*):/'
   - label: 'test'
     title: 
-    - 'test(.*):'
+    - '/test(.*):/'
 
 name-template: "v$NEXT_PATCH_VERSION"
 
