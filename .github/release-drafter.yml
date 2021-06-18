@@ -30,6 +30,6 @@ autolabeler:
 name-template: "v$NEXT_PATCH_VERSION"
 
 template: |
-  $RESOLVED_VERSION
+  ## Release
 
   $CHANGES
