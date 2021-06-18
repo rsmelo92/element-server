@@ -19,3 +19,5 @@ jobs:
     steps:
     - name: Publish a Release
       uses: StuYarrow/publish-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
